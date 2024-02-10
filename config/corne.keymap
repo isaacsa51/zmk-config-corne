@@ -88,12 +88,12 @@
             >;
         };
 
-        layer_4 {
+        sym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp TILDE  &kp AMPERSAND  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT     &trans    &kp DOUBLE_QUOTES  &kp LESS_THAN  &kp GREATER_THAN  &kp SINGLE_QUOTE  &trans
+&trans  &trans     &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp HASH  &kp EQUAL          &kp MINUS      &kp PLUS          &kp EXCLAMATION   &trans
+&trans  &trans     &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN     &trans    &kp SLASH          &kp ASTERISK   &kp BACKSLASH     &kp CARET         &trans
+                                  &trans                &trans                 &trans          &trans    &trans             &trans
             >;
         };
 

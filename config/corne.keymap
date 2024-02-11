@@ -149,10 +149,10 @@
 
         fun {
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans            &trans           &trans     &trans     &trans  &trans  &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &WIN_DESK_LEFT    &WIN_DESK_RIGHT  &trans     &trans     &trans  &trans  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans            &trans           &trans     &trans     &trans  &trans  &trans
-                         &trans  &trans  &trans            &mkp LCLK        &mkp RCLK  &mkp MCLK
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans            &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &WIN_DESK_LEFT    &WIN_DESK_RIGHT  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans            &trans           &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans  &trans            &trans           &trans  &trans
             >;
         };
     };

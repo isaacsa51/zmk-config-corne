@@ -31,6 +31,56 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        WinCopy {
+            bindings = <&kp K_COPY>;
+            key-positions = <26 27>;
+        };
+
+        WinPaste {
+            bindings = <&kp K_PASTE>;
+            key-positions = <28 27>;
+        };
+
+        WinCut {
+            bindings = <&kp K_CUT>;
+            key-positions = <26 28>;
+        };
+
+        MacCopy {
+            bindings = <&kp K_COPY>;
+            key-positions = <26 27 35>;
+        };
+
+        MacCut {
+            bindings = <&kp K_CUT>;
+            key-positions = <26 28 35>;
+        };
+
+        MacPaste {
+            bindings = <&kp K_PASTE>;
+            key-positions = <27 28 35>;
+        };
+    };
+
+    macros {
+        WIN_DESK_LEFT: WIN_DESK_LEFT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp LEFT_CONTROL &kp LEFT>;
+            label = "WIN_DESK_LEFT";
+        };
+
+        WIN_DESK_RIGHT: WIN_DESK_RIGHT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp LEFT_CONTROL &kp RIGHT_ARROW>;
+            label = "WIN_DESK_RIGHT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -97,21 +147,12 @@
             >;
         };
 
-        layer_5 {
+        fun {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans            &trans           &trans     &trans     &trans  &trans  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &WIN_DESK_LEFT    &WIN_DESK_RIGHT  &trans     &trans     &trans  &trans  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans            &trans           &trans     &trans     &trans  &trans  &trans
+                         &trans  &trans  &trans            &mkp LCLK        &mkp RCLK  &mkp MCLK
             >;
         };
     };

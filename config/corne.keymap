@@ -41,37 +41,37 @@
         compatible = "zmk,combos";
 
         WinCopy {
-            bindings = <&kp K_COPY>;
+            bindings = <&kp LC(C)>;
             key-positions = <26 27>;
             layers = <0>;
         };
 
         WinPaste {
-            bindings = <&kp K_PASTE>;
+            bindings = <&kp LC(V)>;
             key-positions = <28 27>;
             layers = <0>;
         };
 
         WinCut {
-            bindings = <&kp K_CUT>;
+            bindings = <&kp LC(X)>;
             key-positions = <26 28>;
             layers = <0>;
         };
 
         MacCopy {
-            bindings = <&kp K_COPY>;
+            bindings = <&kp LG(C)>;
             key-positions = <26 27 35>;
             layers = <0>;
         };
 
         MacCut {
-            bindings = <&kp K_CUT>;
+            bindings = <&kp LG(X)>;
             key-positions = <26 28 35>;
             layers = <0>;
         };
 
         MacPaste {
-            bindings = <&kp K_PASTE>;
+            bindings = <&kp LG(V)>;
             key-positions = <27 28 35>;
             layers = <0>;
         };

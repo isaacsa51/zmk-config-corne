@@ -140,27 +140,27 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans          &kp K_MUTE         &trans           &trans         &trans       &trans            &trans  &trans  &trans  &trans  &trans
-&trans  &kp K_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_FORWARD  &trans       &trans            &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans             &trans           &trans         &trans       &trans            &trans  &trans  &trans  &trans  &trans
-                                           &trans           &trans         &kp SPACE    &kp K_PLAY_PAUSE  &trans  &trans
+&trans  &kp C_PREV         &kp K_MUTE        &kp C_NEXT       &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans             &trans            &trans           &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                                             &trans           &trans  &kp SPACE    &trans  &trans  &trans
             >;
         };
 
         num {
             bindings = <
-&trans  &kp LEFT_BRACE  &kp N7        &kp N8        &kp N9        &kp RIGHT_BRACE    &trans  &trans           &trans     &trans        &trans         &trans
-&trans  &kp SEMICOLON   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL          &trans  &kp RIGHT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_META  &trans
-&trans  &kp GRAVE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH      &trans  &trans           &trans     &trans        &trans         &trans
-                                      &kp N0        &trans        &trans             &trans  &trans           &trans
+&trans  &kp LEFT_BRACE  &kp N7        &kp N8        &kp N9        &kp RIGHT_BRACE    &trans     &kp N7        &kp N8        &kp N9        &trans  &trans
+&trans  &kp SEMICOLON   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL          &kp GRAVE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans  &kp GRAVE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH      &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                                      &kp N0        &trans        &trans             &trans     &trans        &kp N0
             >;
         };
 
         sym {
             bindings = <
-&trans  &kp TILDE  &kp AMPERSAND  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT     &trans    &kp DOUBLE_QUOTES  &kp LESS_THAN  &kp GREATER_THAN  &kp SINGLE_QUOTE  &trans
-&trans  &trans     &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp HASH  &kp EQUAL          &kp MINUS      &kp PLUS          &kp EXCLAMATION   &trans
-&trans  &trans     &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN     &trans    &kp SLASH          &kp ASTERISK   &kp BACKSLASH     &kp CARET         &trans
+&trans  &kp TILDE  &kp DOLLAR     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT     &trans    &kp DOUBLE_QUOTES  &kp LESS_THAN  &kp GREATER_THAN  &kp GRAVE        &trans
+&trans  &trans     &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp HASH  &kp EQUAL          &kp MINUS      &kp PLUS          &kp EXCLAMATION  &trans
+&trans  &trans     &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN     &trans    &kp SLASH          &kp ASTERISK   &kp BACKSLASH     &kp CARET        &trans
                                   &trans                &trans                 &trans          &trans    &trans             &trans
             >;
         };

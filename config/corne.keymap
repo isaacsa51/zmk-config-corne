@@ -158,7 +158,7 @@
 &kp TAB    &kp Q             &kp W        &kp F                &kp P              &kp B        &kp J        &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
 &kp LCTRL  &hml LEFT_META A  &hml LALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G        &kp M        &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp SQT
 &kp LSHFT  &kp Z             &kp X        &kp C                &kp D              &kp V        &kp K        &kp H               &kp COMMA             &kp DOT           &kp FSLH          &key_repeat
-                                          &lt 3 LEFT_ALT       &mo 1              &kp SPACE    &lt 5 ENTER  &lt 2 BACKSPACE     &lt 4 LEFT_GUI
+                                          &lt 3 LEFT_ALT       &mo 1              &kp SPACE    &lt 5 ENTER  &lt 4 BACKSPACE     &lt 2 LEFT_GUI
             >;
         };
 
@@ -185,19 +185,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &kp K_PREV    &kp K_MUTE        &kp C_NEXT       &trans       &trans  &trans          &trans            &trans        &trans        &trans
-&trans  &trans  &kp C_VOL_DN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &trans       &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &trans  &trans        &trans            &trans           &trans       &trans  &trans          &trans            &trans        &trans        &trans
-                              &trans            &trans           &kp SPACE    &trans  &trans          &trans
+&trans  &trans  &kp C_PREV         &kp C_MUTE        &kp C_NEXT       &trans       &trans  &trans          &trans            &trans        &trans        &trans
+&trans  &trans  &kp K_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &trans       &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &trans  &trans             &trans            &trans           &trans       &trans  &trans          &trans            &trans        &trans        &trans
+                                   &trans            &trans           &kp SPACE    &trans  &trans          &trans
             >;
         };
 
         num {
             bindings = <
-&trans  &kp LEFT_BRACE  &kp N7        &kp N8        &kp N9        &kp RIGHT_BRACE    &trans     &kp N7        &kp N8        &kp N9        &trans  &trans
-&trans  &kp SEMICOLON   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL          &kp GRAVE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
-&trans  &kp GRAVE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH      &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                                      &kp N0        &trans        &trans             &trans     &trans        &kp N0
+&kp TAB    &kp LEFT_BRACE  &kp N7        &kp N8        &kp N9        &kp RIGHT_BRACE    &trans     &kp N7        &kp N8        &kp N9        &trans  &trans
+&kp LCTRL  &kp SEMICOLON   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL          &kp GRAVE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&kp LSHFT  &kp GRAVE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH      &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                                         &kp N0        &trans        &trans             &trans     &trans        &kp N0
             >;
         };
 

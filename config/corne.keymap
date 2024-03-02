@@ -40,46 +40,53 @@
     combos {
         compatible = "zmk,combos";
 
-        WinCopy {
-            bindings = <&kp LC(C)>;
+        Copy {
+            bindings = <&kp LC(INSERT)>;
             key-positions = <26 27>;
             layers = <0>;
         };
 
-        WinPaste {
-            bindings = <&kp LC(V)>;
+        Paste {
+            bindings = <&kp LS(INS)>;
             key-positions = <28 27>;
             layers = <0>;
         };
 
-        WinCut {
-            bindings = <&kp LC(X)>;
+        Cut {
+            bindings = <&kp LS(DELETE)>;
             key-positions = <26 28>;
-            layers = <0>;
-        };
-
-        MacCopy {
-            bindings = <&kp LG(C)>;
-            key-positions = <26 27 35>;
-            layers = <0>;
-        };
-
-        MacCut {
-            bindings = <&kp LG(X)>;
-            key-positions = <26 28 35>;
-            layers = <0>;
-        };
-
-        MacPaste {
-            bindings = <&kp LG(V)>;
-            key-positions = <27 28 35>;
             layers = <0>;
         };
 
         caps {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <1 10>;
+            key-positions = <4 7>;
             layers = <0>;
+        };
+
+        prog-parenthesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <41 19>;
+        };
+
+        prog-bracket {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <41 20>;
+        };
+
+        prog-lesst {
+            bindings = <&kp LT>;
+            key-positions = <41 21>;
+        };
+
+        prog-return {
+            bindings = <&kp COLON>;
+            key-positions = <41 31>;
+        };
+
+        prog-equals {
+            bindings = <&kp EQUAL>;
+            key-positions = <41 7>;
         };
     };
 
@@ -97,6 +104,27 @@
             bindings = <&kp LEFT_GUI &kp LEFT_CONTROL &kp RIGHT_ARROW>;
             label = "WIN_DESK_RIGHT";
         };
+
+        cut: cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DEL)>;
+            label = "CUT";
+        };
+
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(INS)>;
+            label = "COPY";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(INS)>;
+            label = "PASTE";
+        };
     };
 
     keymap {
@@ -110,10 +138,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q             &kp W        &kp F                &kp P              &kp B        &kp J        &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp BSPC
+&kp TAB    &kp Q             &kp W        &kp F                &kp P              &kp B        &kp J        &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
 &kp LCTRL  &hml LEFT_META A  &hml LALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G        &kp M        &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp SQT
-&kp LSHFT  &kp Z             &kp X        &kp C                &kp D              &kp V        &kp K        &kp H               &kp COMMA             &kp DOT           &kp FSLH          &trans
-                                          &lt 3 LEFT_ALT       &mo 1              &kp SPACE    &lt 5 ENTER  &lt 2 BACKSPACE     &lt 4 LEFT_GUI
+&kp LSHFT  &kp Z             &kp X        &kp C                &kp D              &kp V        &kp K        &kp H               &kp COMMA             &kp DOT           &kp FSLH          &key_repeat
+                                          &lt 3 RIGHT_ALT      &mo 1              &kp SPACE    &lt 5 ENTER  &lt 2 BACKSPACE     &lt 4 LEFT_GUI
             >;
         };
 
@@ -125,9 +153,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE  &trans        &trans        &trans        &trans          &trans          &trans   &kp HOME        &kp UP     &kp END      &kp PAGE_UP    &kp DELETE
-&kp CAPS    &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &trans          &trans   &kp LEFT_ARROW  &kp DOWN   &kp RIGHT    &kp INS        &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &trans   &kp K_COPY      &kp K_CUT  &kp K_PASTE  &kp PAGE_DOWN  &trans
+&kp ESCAPE  &trans        &trans        &trans        &trans          &trans          &trans   &kp HOME        &kp UP    &kp END    &kp PAGE_UP    &kp DELETE
+&kp CAPS    &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &trans          &trans   &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &kp INS        &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &trans   &copy           &cut      &paste     &kp PAGE_DOWN  &trans
                                         &trans        &trans          &kp SPACE       &kp RET  &trans          &trans
             >;
         };
@@ -140,10 +168,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp C_PREV         &kp K_MUTE        &kp C_NEXT       &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans             &trans            &trans           &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                             &trans           &trans  &kp SPACE    &trans  &trans  &trans
+&trans  &trans  &kp K_PREV    &kp K_MUTE        &kp C_NEXT       &trans       &trans  &trans          &trans            &trans        &trans        &trans
+&trans  &trans  &kp C_VOL_DN  &kp K_PLAY_PAUSE  &kp C_VOLUME_UP  &trans       &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &trans  &trans        &trans            &trans           &trans       &trans  &trans          &trans            &trans        &trans        &trans
+                              &trans            &trans           &kp SPACE    &trans  &trans          &trans
             >;
         };
 
@@ -159,7 +187,7 @@
         sym {
             bindings = <
 &trans  &kp TILDE  &kp DOLLAR     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT     &trans    &kp DOUBLE_QUOTES  &kp LESS_THAN  &kp GREATER_THAN  &kp GRAVE        &trans
-&trans  &trans     &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp HASH  &kp EQUAL          &kp MINUS      &kp PLUS          &kp EXCLAMATION  &trans
+&trans  &kp UNDER  &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp HASH  &kp EQUAL          &kp MINUS      &kp PLUS          &kp EXCLAMATION  &trans
 &trans  &trans     &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN     &trans    &kp SLASH          &kp ASTERISK   &kp BACKSLASH     &kp CARET        &trans
                                   &trans                &trans                 &trans          &trans    &trans             &trans
             >;
@@ -167,10 +195,19 @@
 
         fun {
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans            &trans           &trans  &trans  &trans  &trans  &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &WIN_DESK_LEFT    &WIN_DESK_RIGHT  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans            &trans           &trans  &trans  &trans  &trans  &trans
-                         &trans  &trans  &trans            &trans           &trans  &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans            &trans           &trans          &trans     &trans        &trans        &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &WIN_DESK_LEFT    &WIN_DESK_RIGHT  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans            &trans           &trans          &trans     &trans        &trans        &trans
+                         &trans  &trans  &trans            &trans           &trans          &trans
+            >;
+        };
+
+        button {
+            bindings = <
+&caps_word  &kp K_UNDO    &cut          &copy      &paste     &kp K_REDO     &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &kp K_UNDO    &cut          &copy      &paste     &kp K_AGAIN    &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans     &trans     &trans         &trans  &trans  &trans
             >;
         };
     };

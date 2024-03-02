@@ -88,6 +88,16 @@
             bindings = <&kp EQUAL>;
             key-positions = <41 7>;
         };
+
+        enie {
+            bindings = <&kp RA(N)>;
+            key-positions = <36 19>;
+        };
+
+        enie-mac {
+            bindings = <&enie_mac>;
+            key-positions = <36 12 19>;
+        };
     };
 
     macros {
@@ -125,6 +135,13 @@
             bindings = <&kp LS(INS)>;
             label = "PASTE";
         };
+
+        enie_mac: enie_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N) &kp N>;
+            label = "ENIE_MAC";
+        };
     };
 
     keymap {
@@ -141,7 +158,7 @@
 &kp TAB    &kp Q             &kp W        &kp F                &kp P              &kp B        &kp J        &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
 &kp LCTRL  &hml LEFT_META A  &hml LALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G        &kp M        &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp SQT
 &kp LSHFT  &kp Z             &kp X        &kp C                &kp D              &kp V        &kp K        &kp H               &kp COMMA             &kp DOT           &kp FSLH          &key_repeat
-                                          &lt 3 RIGHT_ALT      &mo 1              &kp SPACE    &lt 5 ENTER  &lt 2 BACKSPACE     &lt 4 LEFT_GUI
+                                          &lt 3 LEFT_ALT       &mo 1              &kp SPACE    &lt 5 ENTER  &lt 2 BACKSPACE     &lt 4 LEFT_GUI
             >;
         };
 

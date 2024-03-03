@@ -149,6 +149,8 @@
         compatible = "zmk,keymap";
 
         alpha {
+            display-name = "ALPHA";
+
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -164,6 +166,8 @@
         };
 
         nav {
+            display-name = "NAV";
+
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -179,6 +183,8 @@
         };
 
         media {
+            display-name = "MEDIA";
+
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -194,6 +200,8 @@
         };
 
         num {
+            display-name = "NUMBERS";
+
             bindings = <
 &kp TAB    &kp LEFT_BRACE  &kp N7        &kp N8        &kp N9        &kp RIGHT_BRACE    &trans     &kp N7        &kp N8        &kp N9        &trans  &trans
 &kp LCTRL  &kp SEMICOLON   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL          &kp GRAVE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
@@ -203,6 +211,8 @@
         };
 
         sym {
+        display-name = "SYMBOLS";
+
             bindings = <
 &trans  &kp TILDE  &kp DOLLAR     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT     &trans    &kp DOUBLE_QUOTES  &kp LESS_THAN  &kp GREATER_THAN  &kp GRAVE        &trans
 &trans  &kp UNDER  &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp HASH  &kp EQUAL          &kp MINUS      &kp PLUS          &kp EXCLAMATION  &trans
@@ -212,6 +222,8 @@
         };
 
         fun {
+            display-name = "FUNCTION";
+
             bindings = <
 &trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans            &trans           &trans          &trans     &trans        &trans        &ext_power EP_TOG
 &trans  &kp F11  &kp F4  &kp F5  &kp F6  &WIN_DESK_LEFT    &WIN_DESK_RIGHT  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &trans

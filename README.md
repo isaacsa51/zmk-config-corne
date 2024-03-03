@@ -1,1 +1,1 @@
-![Keymap Image]("https://imgur.com/gallery/zNAoIWO")
+![Keymap Image](https://i.imgur.com/6bA40no.jpeg)

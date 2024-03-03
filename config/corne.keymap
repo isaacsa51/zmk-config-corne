@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -212,7 +213,7 @@
 
         fun {
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans            &trans           &trans          &trans     &trans        &trans        &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans            &trans           &trans          &trans     &trans        &trans        &ext_power EP_TOG
 &trans  &kp F11  &kp F4  &kp F5  &kp F6  &WIN_DESK_LEFT    &WIN_DESK_RIGHT  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &trans
 &trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans            &trans           &trans          &trans     &trans        &trans        &trans
                          &trans  &trans  &trans            &trans           &trans          &trans

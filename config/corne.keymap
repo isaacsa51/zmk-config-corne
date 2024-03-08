@@ -44,60 +44,67 @@
         Copy {
             bindings = <&kp LC(INSERT)>;
             key-positions = <26 27>;
-            layers = <0>;
+            layers = <0 6>;
         };
 
         Paste {
             bindings = <&kp LS(INS)>;
             key-positions = <28 27>;
-            layers = <0>;
+            layers = <0 6>;
         };
 
         Cut {
             bindings = <&kp LS(DELETE)>;
             key-positions = <26 28>;
-            layers = <0>;
+            layers = <0 6>;
         };
 
         caps {
             bindings = <&kp CAPSLOCK>;
             key-positions = <4 7>;
-            layers = <0>;
+            layers = <0 6>;
         };
 
         prog-parenthesis {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <19 40>;
+            layers = <0 6>;
         };
 
         prog-bracket {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <20 40>;
+            layers = <0 6>;
         };
 
         prog-lesst {
             bindings = <&kp LT>;
             key-positions = <21 40>;
+            layers = <0 6>;
         };
 
         prog-return {
             bindings = <&kp COLON>;
             key-positions = <31 40>;
+            layers = <0 6>;
         };
 
         prog-equals {
             bindings = <&kp EQUAL>;
             key-positions = <7 40>;
+            layers = <0 6>;
         };
 
         enie {
             bindings = <&kp RA(N)>;
             key-positions = <36 19>;
+            layers = <0 6>;
         };
 
         enie-mac {
             bindings = <&enie_mac>;
             key-positions = <36 12 19>;
+            layers = <0 6>;
         };
     };
 
@@ -231,10 +238,10 @@
 
         crate {
             bindings = <
-&kp TAB     &kp W  &kp L  &kp Y           &kp P  &kp B          &kp J        &kp F            &kp O           &kp U       &kp SEMICOLON  &kp ESCAPE
-&kp LCTRL   &kp C  &kp R  &kp A           &kp T  &kp G          &kp M        &kp N            &kp E           &kp I       &kp K          &kp SQT
-&kp LSHIFT  &kp X  &kp Z  &kp Q           &kp D  &kp K_AGAIN    &kp H        &kp S            &kp COMMA       &kp PERIOD  &kp SLASH      &to 0
-                          &lt 3 LEFT_ALT  &mo 1  &kp SPACE      &lt 5 ENTER  &lt 4 BACKSPACE  &lt 2 LEFT_GUI
+&kp TAB     &kp W  &kp L  &kp Y           &kp P  &kp B        &kp J        &kp F            &kp O           &kp U       &kp SEMICOLON  &kp ESCAPE
+&kp LCTRL   &kp C  &kp R  &kp A           &kp T  &kp G        &kp M        &kp N            &kp E           &kp I       &kp K          &kp SQT
+&kp LSHIFT  &kp X  &kp Z  &kp Q           &kp D  &kp V        &kp H        &kp S            &kp COMMA       &kp PERIOD  &kp SLASH      &to 0
+                          &lt 3 LEFT_ALT  &mo 1  &kp SPACE    &lt 5 ENTER  &lt 4 BACKSPACE  &lt 2 LEFT_GUI
             >;
 
             label = "CRATE";

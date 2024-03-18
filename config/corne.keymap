@@ -65,7 +65,7 @@
             layers = <0 6>;
         };
 
-        prog-bracket {
+        prog-braces {
             bindings = <&brackets>;
             key-positions = <20 19>;
             layers = <0 6>;

@@ -43,55 +43,49 @@
 
         Copy {
             bindings = <&kp LC(INSERT)>;
-            key-positions = <26 27>;
+            key-positions = <3 2 4>;
             layers = <0 6>;
         };
 
         Paste {
             bindings = <&kp LS(INS)>;
-            key-positions = <28 27>;
+            key-positions = <14 15 16>;
             layers = <0 6>;
         };
 
         Cut {
             bindings = <&kp LS(DELETE)>;
-            key-positions = <26 28>;
-            layers = <0 6>;
-        };
-
-        caps {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <4 7>;
+            key-positions = <26 28 27>;
             layers = <0 6>;
         };
 
         prog-parenthesis {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <19 40>;
+            bindings = <&par>;
+            key-positions = <7 8>;
             layers = <0 6>;
         };
 
         prog-bracket {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <20 40>;
+            bindings = <&brackets>;
+            key-positions = <20 19>;
             layers = <0 6>;
         };
 
-        prog-lesst {
+        prog-less {
             bindings = <&kp LT>;
-            key-positions = <21 40>;
+            key-positions = <32 19>;
             layers = <0 6>;
         };
 
         prog-return {
             bindings = <&kp COLON>;
-            key-positions = <31 40>;
+            key-positions = <19 21 20>;
             layers = <0 6>;
         };
 
         prog-equals {
             bindings = <&kp EQUAL>;
-            key-positions = <7 40>;
+            key-positions = <7 8 9>;
             layers = <0 6>;
         };
 
@@ -106,20 +100,45 @@
             key-positions = <36 12 19>;
             layers = <0 6>;
         };
+
+        huh {
+            bindings = <&kp QUESTION>;
+            key-positions = <14 15 4>;
+        };
+
+        chin {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <25 26 3>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <19 18>;
+        };
+
+        under {
+            bindings = <&kp UNDER>;
+            key-positions = <31 30>;
+        };
+
+        prog-bracket {
+            bindings = <&kp LBKT>;
+            key-positions = <8 19>;
+        };
     };
 
     macros {
-        WIN_DESK_LEFT: WIN_DESK_LEFT {
+        par: WIN_DESK_LEFT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_CONTROL &kp LEFT>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
             label = "WIN_DESK_LEFT";
         };
 
-        WIN_DESK_RIGHT: WIN_DESK_RIGHT {
+        brackets: WIN_DESK_RIGHT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_CONTROL &kp RIGHT_ARROW>;
+            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
             label = "WIN_DESK_RIGHT";
         };
 
@@ -147,7 +166,7 @@
         enie_mac: enie_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(N) &kp N>;
+            bindings = <&kp LA(N) &kp N &kp N>;
             label = "ENIE_MAC";
         };
     };
@@ -229,10 +248,10 @@
         fun {
             display-name = "FUNCTION";
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans            &trans           &trans          &trans     &trans        &trans        &ext_power EP_TOG
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &WIN_DESK_LEFT    &WIN_DESK_RIGHT  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans            &trans           &trans          &trans     &trans        &trans        &trans
-                         &trans  &trans  &trans            &trans           &trans          &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans    &trans  &trans          &trans     &trans        &trans        &ext_power EP_TOG
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans    &trans  &trans          &trans     &trans        &trans        &trans
+                         &trans  &trans  &trans    &trans  &trans          &trans
             >;
         };
 

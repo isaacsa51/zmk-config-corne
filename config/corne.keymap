@@ -174,7 +174,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q             &kp W        &kp Y                &kp P              &kp B        &kp J      &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
+&kp TAB    &kp Q             &kp W        &kp F                &kp P              &kp B        &kp J      &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
 &kp LCTRL  &hml LEFT_META A  &hml LALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G        &kp M      &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp SQT
 &kp LSHFT  &kp Z             &kp X        &kp C                &kp D              &kp V        &kp K      &kp H               &kp COMMA             &kp DOT           &kp FSLH          &key_repeat
                                           &lt 3 LEFT_ALT       &mo 1              &kp SPACE    &kp ENTER  &lt 4 BACKSPACE     &lt 2 LEFT_GUI

@@ -59,32 +59,20 @@
             layers = <0>;
         };
 
-        prog-parenthesis {
-            bindings = <&par>;
-            key-positions = <7 8>;
-            layers = <0>;
-        };
-
-        prog-braces {
-            bindings = <&brackets>;
-            key-positions = <20 19>;
-            layers = <0>;
-        };
-
         prog-less {
             bindings = <&kp LT>;
             key-positions = <32 19>;
             layers = <0>;
         };
 
-        prog-return {
-            bindings = <&kp COLON>;
+        prog-equals {
+            bindings = <&kp EQUAL>;
             key-positions = <19 21 20>;
             layers = <0>;
         };
 
-        prog-equals {
-            bindings = <&kp EQUAL>;
+        prog-colon {
+            bindings = <&kp COLON>;
             key-positions = <7 8 9>;
             layers = <0>;
         };
@@ -120,28 +108,9 @@
             bindings = <&kp UNDER>;
             key-positions = <31 30>;
         };
-
-        prog-bracket {
-            bindings = <&kp LBKT>;
-            key-positions = <8 19>;
-        };
     };
 
     macros {
-        par: WIN_DESK_LEFT {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
-            label = "WIN_DESK_LEFT";
-        };
-
-        brackets: WIN_DESK_RIGHT {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
-            label = "WIN_DESK_RIGHT";
-        };
-
         cut: cut {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -183,6 +152,13 @@
             bindings = <&kp LC(RIGHT)>;
             label = "RIGHT_WORD";
         };
+
+        fast_del: fast_del {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(BACKSPACE)>;
+            label = "FAST_DEL";
+        };
     };
 
     keymap {
@@ -198,15 +174,15 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q             &kp W        &kp Y                &kp P              &kp B        &kp J        &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
-&kp LCTRL  &hml LEFT_META C  &hml LALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G        &kp M        &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp SQT
-&kp LSHFT  &kp Z             &kp X        &kp C                &kp D              &kp V        &kp K        &kp H               &kp COMMA             &kp DOT           &kp FSLH          &key_repeat
-                                          &lt 3 LEFT_ALT       &mo 1              &kp SPACE    &lt 5 ENTER  &lt 4 BACKSPACE     &lt 2 LEFT_GUI
+&kp TAB    &kp Q             &kp W        &kp Y                &kp P              &kp B        &kp J      &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
+&kp LCTRL  &hml LEFT_META A  &hml LALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G        &kp M      &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp SQT
+&kp LSHFT  &kp Z             &kp X        &kp C                &kp D              &kp V        &kp K      &kp H               &kp COMMA             &kp DOT           &kp FSLH          &key_repeat
+                                          &lt 3 LEFT_ALT       &mo 1              &kp SPACE    &kp ENTER  &lt 4 BACKSPACE     &lt 2 LEFT_GUI
             >;
         };
 
-        nav {
-            display-name = "NAV";
+        num-nav {
+            display-name = "NUM-NAV";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -215,10 +191,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE  &trans        &trans        &trans        &trans          &trans          &trans   &left_word      &kp UP    &right_word  &kp PAGE_UP    &kp DELETE
-&kp CAPS    &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &trans          &trans   &kp LEFT_ARROW  &kp DOWN  &kp RIGHT    &kp INS        &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &trans   &copy           &cut      &paste       &kp PAGE_DOWN  &trans
-                                        &trans        &trans          &kp SPACE       &kp RET  &trans          &trans
+&kp ESCAPE  &sk LEFT_ALT    &kp N7        &kp N8        &kp N9        &trans       &trans   &left_word      &kp UP    &right_word  &kp PAGE_UP    &kp DELETE
+&kp CAPS    &sk LEFT_SHIFT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0       &trans   &kp LEFT_ARROW  &kp DOWN  &kp RIGHT    &kp INS        &trans
+&kp N0      &sk LCTRL       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans       &trans   &kp HOME        &cut      &kp END      &kp PAGE_DOWN  &trans
+                                          &trans        &trans        &kp SPACE    &kp RET  &fast_del       &trans
             >;
         };
 
@@ -239,13 +215,13 @@
             >;
         };
 
-        num {
-            display-name = "NUMBERS";
+        fun {
+            display-name = "functions";
             bindings = <
-&kp TAB    &kp LEFT_BRACE  &kp N7        &kp N8        &kp N9        &kp RIGHT_BRACE    &trans     &kp N7        &kp N8        &kp N9        &trans  &trans
-&kp LCTRL  &kp SEMICOLON   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL          &kp GRAVE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
-&kp LSHFT  &kp GRAVE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH      &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                                         &kp N0        &trans        &trans             &trans     &trans        &kp N0
+&trans  &kp F12  &kp F7  &kp F8  &kp N9  &trans    &trans      &kp N7        &kp N8        &kp N9        &trans        &ext_power EP_ON
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans    &trans      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &bootloader
+                         &trans  &trans  &trans    &trans      &trans        &trans
             >;
         };
 
@@ -256,16 +232,6 @@
 &trans  &kp UNDER  &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp HASH  &kp EQUAL          &kp MINUS      &kp PLUS          &kp EXCLAMATION  &trans
 &trans  &trans     &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN     &trans    &kp SLASH          &kp ASTERISK   &kp BACKSLASH     &kp CARET        &trans
                                   &trans                &trans                 &trans          &trans    &trans             &trans
-            >;
-        };
-
-        fun {
-            display-name = "FUNCTION";
-            bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans    &trans  &trans          &trans     &trans        &trans        &ext_power EP_TOG
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans    &trans  &trans          &trans     &trans        &trans        &trans
-                         &trans  &trans  &trans    &trans  &trans          &trans
             >;
         };
     };

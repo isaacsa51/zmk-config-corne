@@ -234,5 +234,27 @@
                                   &trans                &trans                 &trans          &trans    &trans             &trans
             >;
         };
+
+        WM {
+            bindings = <
+&trans  &trans  &trans            &trans            &trans            &trans    &trans  &trans            &trans      &trans            &trans  &trans
+&trans  &trans  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &trans    &trans  &kp LA(NUMBER_4)  &kp LA(N5)  &kp LA(NUMBER_6)  &trans  &trans
+&trans  &trans  &kp LA(N7)        &kp LA(N9)        &kp LA(N0)        &trans    &trans  &trans            &trans      &trans            &trans  &trans
+                                  &trans            &trans            &trans    &trans  &trans            &trans
+            >;
+
+            label = "WM";
+        };
+
+        android {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "droid";
+        };
     };
 };

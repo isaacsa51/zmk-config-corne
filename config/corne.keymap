@@ -216,13 +216,15 @@
         };
 
         fun {
-            display-name = "functions";
+            display-name = "FUNCTIONS";
             bindings = <
 &trans  &kp F12  &kp F7  &kp F8  &kp N9  &trans    &trans      &kp N7        &kp N8        &kp N9        &trans        &ext_power EP_ON
 &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans
 &trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans    &trans      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &bootloader
                          &trans  &trans  &trans    &trans      &trans        &trans
             >;
+
+            label = "FUNCTION";
         };
 
         sym {
@@ -235,12 +237,12 @@
             >;
         };
 
-        WM {
+        wm {
             bindings = <
-&trans  &trans  &trans            &trans            &trans            &trans    &trans  &trans            &trans      &trans            &trans  &trans
-&trans  &trans  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &trans    &trans  &kp LA(NUMBER_4)  &kp LA(N5)  &kp LA(NUMBER_6)  &trans  &trans
-&trans  &trans  &kp LA(N7)        &kp LA(N9)        &kp LA(N0)        &trans    &trans  &trans            &trans      &trans            &trans  &trans
-                                  &trans            &trans            &trans    &trans  &trans            &trans
+&trans  &trans  &trans            &trans            &kp LS(LA(Q))     &trans           &trans             &sk LS(LEFT_ALT)    &trans         &trans            &trans  &trans
+&trans  &trans  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(SPACE)    &kp LA(LS(SPACE))  &kp LA(NUMBER_4)    &kp LA(N5)     &kp LA(NUMBER_6)  &trans  &trans
+&trans  &trans  &kp LA(N7)        &kp LA(N9)        &kp LA(N0)        &trans           &trans             &kp LA(LEFT_ARROW)  &kp LA(RIGHT)  &trans            &trans  &trans
+                                  &trans            &trans            &trans           &trans             &trans              &trans
             >;
 
             label = "WM";
@@ -254,7 +256,21 @@
                                    &trans                  &trans             &trans                          &trans           &trans        &trans
             >;
 
-            label = "droid";
+            label = "DROID";
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        glaze-wm {
+            if-layers = <2>;
+            then-layer = <3>;
+        };
+
+        android-shortcuts {
+            if-layers = <1>;
+            then-layer = <4>;
         };
     };
 };

@@ -264,13 +264,13 @@
         compatible = "zmk,conditional-layers";
 
         glaze-wm {
-            if-layers = <2>;
-            then-layer = <3>;
+            if-layers = <2 3>;
+            then-layer = <5>;
         };
 
         android-shortcuts {
-            if-layers = <1>;
-            then-layer = <4>;
+            if-layers = <1 4>;
+            then-layer = <6>;
         };
     };
 };

@@ -248,10 +248,10 @@
 
         android {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans             &kp LA(LS(LEFT_ARROW))  &kp LA(LS(RIGHT))  &trans                          &trans           &trans        &kp LC(LS(LA(ENTER)))          &trans  &trans  &trans
+&trans  &trans  &kp LC(SEMICOLON)  &kp LC(LA(B))           &kp LA(ENTER)      &kp LC(LS(NON_US_BACKSLASH))    &kp LS(LC(SQT))  &kp LA(LEFT)  &kp LA(RIGHT)                  &trans  &trans  &trans
+&trans  &trans  &trans             &kp LC(LS(GRAVE))       &kp LC(LS(F1))     &kp LA(LS(F10))                 &kp LS(LA(F9))   &trans        &kp LS(LA(LC(RIGHT_BRACKET)))  &trans  &trans  &trans
+                                   &trans                  &trans             &trans                          &trans           &trans        &trans
             >;
 
             label = "droid";

@@ -79,13 +79,13 @@
 
         enie {
             bindings = <&kp RA(N)>;
-            key-positions = <36 19>;
+            key-positions = <36 22>;
             layers = <0>;
         };
 
         enie-mac {
             bindings = <&enie_mac>;
-            key-positions = <36 12 19>;
+            key-positions = <36 12 22>;
             layers = <0>;
         };
 

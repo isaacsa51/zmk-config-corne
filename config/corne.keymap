@@ -79,13 +79,13 @@
 
         enie {
             bindings = <&kp RA(N)>;
-            key-positions = <36 22>;
+            key-positions = <36 15>;
             layers = <0>;
         };
 
         enie-mac {
             bindings = <&enie_mac>;
-            key-positions = <36 12 22>;
+            key-positions = <36 12 15>;
             layers = <0>;
         };
 
@@ -174,10 +174,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp B             &kp Y        &kp O                &kp U              &kp SINGLE_QUOTE    &kp SEMICOLON  &kp L               &kp D                 &kp W             &kp V             &kp Z
-&kp LCTRL  &hml LEFT_META C  &hml LALT I  &hml LEFT_CONTROL E  &hml LEFT_SHIFT A  &kp COMMA           &kp PERIOD     &hmr RIGHT_SHIFT H  &hmr RIGHT_CONTROL T  &hmr RIGHT_ALT S  &hmr RIGHT_GUI N  &kp Q
-&kp LSHFT  &kp G             &kp X        &kp J                &kp K              &kp MINUS           &kp SLASH      &kp R               &kp M                 &kp F             &kp P             &key_repeat
-                                          &lt 3 LEFT_ALT       &mo 1              &kp SPACE           &kp ENTER      &lt 4 BACKSPACE     &lt 2 LEFT_GUI
+&kp TAB    &kp W             &kp F        &kp M                &kp P              &kp V        &kp SLASH  &kp PERIOD          &kp Q                 &kp SEMICOLON     &kp SINGLE_QUOTE  &kp Z
+&kp LCTRL  &hml LEFT_META R  &hml LALT S  &hml LEFT_CONTROL N  &hml LEFT_SHIFT T  &kp B        &kp COMMA  &hmr RIGHT_SHIFT A  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI H  &kp J
+&kp LSHFT  &kp X             &kp C        &kp L                &kp D              &kp G        &kp MINUS  &kp U               &kp O                 &kp Y             &kp K             &key_repeat
+                                          &lt 3 LEFT_ALT       &mo 1              &kp SPACE    &kp ENTER  &lt 4 BACKSPACE     &lt 2 LEFT_GUI
             >;
         };
 

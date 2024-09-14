@@ -174,10 +174,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp COMMA         &kp M        &kp L                &kp C              &kp Q        &kp X      &kp V               &kp A                 &kp U             &kp Y             &kp ESCAPE
-&kp LCTRL  &hml LEFT_META R  &hml LALT T  &hml LEFT_CONTROL N  &hml LEFT_SHIFT D  &kp B        &kp Z      &hmr RIGHT_SHIFT S  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT O  &hmr RIGHT_GUI I  &kp SEMICOLON
-&kp LSHFT  &kp PERIOD        &kp F        &kp H                &kp P              &kp SQT      &kp J      &kp G               &kp K                 &kp W             &kp FSLH          &key_repeat
-                                          &lt 3 LEFT_ALT       &mo 1              &kp SPACE    &kp ENTER  &lt 4 BACKSPACE     &lt 2 LEFT_GUI
+&kp TAB    &kp B             &kp Y        &kp O                &kp U              &kp SINGLE_QUOTE    &kp SEMICOLON  &kp L               &kp D                 &kp W             &kp V             &kp Z
+&kp LCTRL  &hml LEFT_META C  &hml LALT I  &hml LEFT_CONTROL E  &hml LEFT_SHIFT A  &kp COMMA           &kp PERIOD     &hmr RIGHT_SHIFT H  &hmr RIGHT_CONTROL T  &hmr RIGHT_ALT S  &hmr RIGHT_GUI N  &kp Q
+&kp LSHFT  &kp G             &kp X        &kp J                &kp K              &kp MINUS           &kp SLASH      &kp R               &kp M                 &kp F             &kp P             &key_repeat
+                                          &lt 3 LEFT_ALT       &mo 1              &kp SPACE           &kp ENTER      &lt 4 BACKSPACE     &lt 2 LEFT_GUI
             >;
         };
 

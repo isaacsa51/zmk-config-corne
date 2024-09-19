@@ -79,13 +79,13 @@
 
         enie {
             bindings = <&kp RA(N)>;
-            key-positions = <36 15>;
+            key-positions = <36 19>;
             layers = <0>;
         };
 
         enie-mac {
             bindings = <&enie_mac>;
-            key-positions = <36 12 15>;
+            key-positions = <36 19 16>;
             layers = <0>;
         };
 
@@ -107,6 +107,11 @@
         under {
             bindings = <&kp UNDER>;
             key-positions = <31 30>;
+        };
+
+        accent {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <16 20>;
         };
     };
 

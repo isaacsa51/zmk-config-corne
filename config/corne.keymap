@@ -96,7 +96,7 @@
 
         chin {
             bindings = <&kp EXCLAMATION>;
-            key-positions = <25 26 3>;
+            key-positions = <26 4 27>;
         };
 
         minus {
@@ -112,6 +112,11 @@
         accent {
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <16 20>;
+        };
+
+        caps {
+            bindings = <&caps_word>;
+            key-positions = <17 18>;
         };
     };
 

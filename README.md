@@ -1,3 +1,3 @@
-![Keymap](image)
+![Keymap](keymap.png)
 
-![Combos](image)
+![Combos](keymap_combos.png)

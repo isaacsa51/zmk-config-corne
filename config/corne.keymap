@@ -59,64 +59,104 @@
             layers = <0>;
         };
 
-        prog-less {
-            bindings = <&kp LT>;
-            key-positions = <32 19>;
-            layers = <0>;
-        };
-
-        prog-equals {
-            bindings = <&kp EQUAL>;
-            key-positions = <19 21 20>;
-            layers = <0>;
-        };
-
-        prog-colon {
-            bindings = <&kp COLON>;
-            key-positions = <7 8 9>;
-            layers = <0>;
-        };
-
-        enie {
-            bindings = <&kp RA(N)>;
-            key-positions = <36 19>;
-            layers = <0>;
-        };
-
-        enie-mac {
-            bindings = <&enie_mac>;
-            key-positions = <36 19 16>;
-            layers = <0>;
-        };
-
         huh {
             bindings = <&kp QUESTION>;
-            key-positions = <14 15 4>;
+            key-positions = <19 8>;
         };
 
         chin {
             bindings = <&kp EXCLAMATION>;
-            key-positions = <26 4 27>;
-        };
-
-        minus {
-            bindings = <&kp MINUS>;
-            key-positions = <19 18>;
-        };
-
-        under {
-            bindings = <&kp UNDER>;
-            key-positions = <31 30>;
-        };
-
-        accent {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <16 20>;
+            key-positions = <3 16>;
         };
 
         caps {
             bindings = <&caps_word>;
             key-positions = <17 18>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <15 14>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <15 16>;
+        };
+
+        under {
+            bindings = <&kp UNDER>;
+            key-positions = <15 28>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <16 17>;
+        };
+
+        dobledot {
+            bindings = <&kp COLON>;
+            key-positions = <19 20>;
+        };
+
+        doubleQ {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <20 21>;
+        };
+
+        oParenthesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <7 8>;
+        };
+
+        cParenthesis {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <8 9>;
+        };
+
+        oBracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <2 3>;
+        };
+
+        cBracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <3 4>;
+        };
+
+        oBrace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <26 27>;
+        };
+
+        cBrace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <27 28>;
+        };
+
+        minor {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <31 32>;
+        };
+
+        greater {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <32 33>;
+        };
+
+        arst {
+            bindings = <&kp CARET>;
+            key-positions = <19 8 21>;
+        };
+
+        ivSlash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <20 33>;
+        };
+
+        asterisk {
+            bindings = <&kp ASTRK>;
+            key-positions = <7 8 21>;
         };
     };
 
@@ -140,13 +180,6 @@
             #binding-cells = <0>;
             bindings = <&kp LS(INS)>;
             label = "PASTE";
-        };
-
-        enie_mac: enie_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(N) &kp N &kp N>;
-            label = "ENIE_MAC";
         };
 
         left_word: left_word {
@@ -184,10 +217,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q             &kp W        &kp F                &kp P              &kp B        &kp J      &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
-&kp LCTRL  &hml LEFT_META A  &hml LALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G        &kp M      &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp SQT
-&kp LSHFT  &kp Z             &kp X        &kp C                &kp D              &kp V        &kp K      &kp H               &kp SLASH             &kp COMMA         &kp PERIOD        &key_repeat
-                                          &lt 3 LEFT_ALT       &mo 1              &kp SPACE    &kp ENTER  &lt 4 BACKSPACE     &lt 2 LEFT_GUI
+&kp TAB       &kp Q             &kp W        &kp F                &kp P              &kp B        &kp J      &kp L               &kp U                 &kp Y             &kp SEMICOLON     &kp ESCAPE
+&kp LEFT_GUI  &hml LEFT_META A  &hml LALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G        &kp M      &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp SQT
+&kp LSHFT     &kp Z             &kp X        &kp C                &kp D              &kp V        &kp K      &kp H               &kp SLASH             &kp COMMA         &kp PERIOD        &key_repeat
+                                             &lt 3 LEFT_ALT       &mo 1              &kp SPACE    &kp ENTER  &lt 4 BACKSPACE     &lt 2 LEFT_GUI
             >;
         };
 
@@ -228,9 +261,9 @@
         fun {
             display-name = "FUNCTIONS";
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp N9  &trans    &trans      &kp N7        &kp N8        &kp N9        &trans        &ext_power EP_ON
+&trans  &kp F12  &kp F7  &kp F8  &kp N9  &trans    &trans      &trans        &trans        &trans        &trans        &ext_power EP_ON
 &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans    &trans      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &bootloader
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans    &trans      &trans        &trans        &trans        &trans        &bootloader
                          &trans  &trans  &trans    &trans      &trans        &trans
             >;
 
@@ -257,30 +290,14 @@
 
             label = "WM";
         };
-
-        android {
-            bindings = <
-&trans  &trans  &trans             &kp LA(LS(LEFT_ARROW))  &kp LA(LS(RIGHT))  &trans                          &trans           &trans        &kp LC(LS(LA(ENTER)))          &trans  &trans  &trans
-&trans  &trans  &kp LC(SEMICOLON)  &kp LC(LA(B))           &kp LA(ENTER)      &kp LC(LS(NON_US_BACKSLASH))    &kp LS(LC(SQT))  &kp LA(LEFT)  &kp LA(RIGHT)                  &trans  &trans  &trans
-&trans  &trans  &trans             &kp LC(LS(GRAVE))       &kp LC(LS(F1))     &kp LA(LS(F10))                 &kp LS(LA(F9))   &trans        &kp LS(LA(LC(RIGHT_BRACKET)))  &trans  &trans  &trans
-                                   &trans                  &trans             &trans                          &trans           &trans        &trans
-            >;
-
-            label = "DROID";
-        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        glaze-wm {
+        wm {
             if-layers = <2 3>;
             then-layer = <5>;
-        };
-
-        android-shortcuts {
-            if-layers = <1 4>;
-            then-layer = <6>;
         };
     };
 };
